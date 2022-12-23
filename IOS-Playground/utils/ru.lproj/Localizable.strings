@@ -1,0 +1,8 @@
+/* 
+  Localizable.strings
+  IOS-Playground
+
+  Created by Roman Makeev on 24.12.2022.
+  
+*/
+"hello_world" = "Привет, мир!";

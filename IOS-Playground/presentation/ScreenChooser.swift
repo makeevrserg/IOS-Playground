@@ -17,7 +17,9 @@ struct ScreenChooser: View {
     var body: some View {
         NavigationView {
             VStack {
-                Text("Choose a screen")
+                Text(Strings.helloWorld.value)
+                Text(Strings.helloWorld.value)
+                Text(Strings.chooseScreen.value)
                 Button(action: {
                     navigation.pushView(LaunchStoryboardScreen, animated: true)
                 }) { Text("Storyboard Main screen") }
