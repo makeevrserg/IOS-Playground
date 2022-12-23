@@ -17,6 +17,9 @@
 		A8F942EC2956674B00594222 /* FirstScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F942EB2956674B00594222 /* FirstScreen.swift */; };
 		A8F942EE2956675600594222 /* SecondScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F942ED2956675600594222 /* SecondScreen.swift */; };
 		A8F942F22956689300594222 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F942F12956689300594222 /* Color.swift */; };
+		A8F942F529566A1F00594222 /* CircularProgressIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F942F429566A1F00594222 /* CircularProgressIndicator.swift */; };
+		A8F942F729566A3400594222 /* StoryBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F942F629566A3400594222 /* StoryBoardView.swift */; };
+		A8F942FA29566A6F00594222 /* ScreenChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F942F929566A6F00594222 /* ScreenChooser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 		A8F942EB2956674B00594222 /* FirstScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreen.swift; sourceTree = "<group>"; };
 		A8F942ED2956675600594222 /* SecondScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreen.swift; sourceTree = "<group>"; };
 		A8F942F12956689300594222 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		A8F942F429566A1F00594222 /* CircularProgressIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressIndicator.swift; sourceTree = "<group>"; };
+		A8F942F629566A3400594222 /* StoryBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoardView.swift; sourceTree = "<group>"; };
+		A8F942F929566A6F00594222 /* ScreenChooser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenChooser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				A8F942E4295666C400594222 /* presentation */,
+				A8F942F329566A0500594222 /* components */,
 				A8F942EF2956686500594222 /* extension */,
 				A8F942F02956687100594222 /* utils */,
 				A8F942D0295666A700594222 /* AppDelegate.swift */,
@@ -81,6 +88,7 @@
 				A8F942EA2956673300594222 /* second_screen */,
 				A8F942E92956672D00594222 /* first_screen */,
 				A8F942E82956672100594222 /* main */,
+				A8F942F929566A6F00594222 /* ScreenChooser.swift */,
 			);
 			path = presentation;
 			sourceTree = "<group>";
@@ -124,6 +132,15 @@
 				A8F942F12956689300594222 /* Color.swift */,
 			);
 			path = utils;
+			sourceTree = "<group>";
+		};
+		A8F942F329566A0500594222 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				A8F942F429566A1F00594222 /* CircularProgressIndicator.swift */,
+				A8F942F629566A3400594222 /* StoryBoardView.swift */,
+			);
+			path = components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,7 +223,10 @@
 				A8F942EC2956674B00594222 /* FirstScreen.swift in Sources */,
 				A8F942D5295666A700594222 /* ViewController.swift in Sources */,
 				A8F942D1295666A700594222 /* AppDelegate.swift in Sources */,
+				A8F942F729566A3400594222 /* StoryBoardView.swift in Sources */,
+				A8F942FA29566A6F00594222 /* ScreenChooser.swift in Sources */,
 				A8F942D3295666A700594222 /* SceneDelegate.swift in Sources */,
+				A8F942F529566A1F00594222 /* CircularProgressIndicator.swift in Sources */,
 				A8F942EE2956675600594222 /* SecondScreen.swift in Sources */,
 				A8F942F22956689300594222 /* Color.swift in Sources */,
 			);
