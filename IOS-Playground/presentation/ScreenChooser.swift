@@ -32,6 +32,9 @@ struct ScreenChooser: View {
                 ChooserButton(title: "RickMorty Characters", navigation: navigation) {
                     RickMortyCharacterList()
                 }
+                ChooserButton(title: "Draw screen", navigation: navigation) {
+                    DrawScreen()
+                }
                 BackgroundButton(title: "Dark theme") {
                     LocalDataSourceModule.value.theme.save(value: Theme.dark)
                     

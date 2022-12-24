@@ -7,7 +7,7 @@
 
 import Foundation
 
-class RMCharacterListViewModel: ObservableObject {
+class RMCharacterListViewModel: ViewModel {
     private var api = RickMortyAPIModule.value
     @Published var list: [RMCharacter] = []
     
@@ -25,8 +25,9 @@ class RMCharacterListViewModel: ObservableObject {
     func loadNextPage() {
         Task{ await self.charactersPaging.loadNextPage() }
     }
-    init(){
-        loadNextPage()
+    override init(){
+        super.init()
+        self.loadNextPage()
     }
 }
 
