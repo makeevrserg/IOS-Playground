@@ -28,15 +28,25 @@ struct LocalizedString: ILocalization {
         }
     }
     
-    static var currentLocale: String { get { return Locale.current.language.languageCode?.identifier ?? "en_US" } }
+    static var currentLocale: String { get { return Locale.current.language.languageCode?.identifier ?? "en" } }
 }
 
 class Strings {
     static var helloWorld = LocalizationResource(key: "hello_world")
+    
     static var chooseScreen = LocalizedString {
         return "Choose screen"
     } russian: {
         "Выберите экран"
+    }
+    
+    static private var _currentLocale = LocalizedString {
+        return "Current locale: %locale%"
+    } russian: {
+        "Текущая локаль: %locale%"
+    }
+    static func currentLocale(localeCode: String) -> String {
+        return _currentLocale.value.replacingOccurrences(of: "%locale%", with: localeCode)
     }
 
 }

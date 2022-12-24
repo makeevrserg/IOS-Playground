@@ -17,7 +17,7 @@ struct ScreenChooser: View {
     var body: some View {
         NavigationView {
             VStack {
-                Text(Strings.helloWorld.value)
+                Text(Strings.currentLocale(localeCode: LocalizedString.currentLocale))
                 Text(Strings.helloWorld.value)
                 Text(Strings.chooseScreen.value)
                 Button(action: {
@@ -30,6 +30,10 @@ struct ScreenChooser: View {
                 Button(action: {
                     navigation.pushView(FirstScreen(), animated: true)
                 }) { Text("First screen") }
+                
+                Button(action: {
+                    navigation.pushView(UserDefaultsScreen(), animated: true)
+                }) { Text("User defaults screen") }
             }
             .navigationBarTitle("First Tab", displayMode: .large)
   
