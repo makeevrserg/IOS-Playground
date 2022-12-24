@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Foundation
 import SwiftUI
 import XNavigation
 
@@ -29,6 +28,9 @@ struct ScreenChooser: View {
                 }
                 ChooserButton(title: "User defaults screen", navigation: navigation) {
                     UserDefaultsScreen()
+                }
+                ChooserButton(title: "RickMorty Characters", navigation: navigation) {
+                    RickMortyCharacterList()
                 }
                 BackgroundButton(title: "Dark theme") {
                     LocalDataSourceModule.value.theme.save(value: Theme.dark)

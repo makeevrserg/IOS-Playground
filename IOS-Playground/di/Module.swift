@@ -23,3 +23,7 @@ var UserDefaultsModule = Module {
 var LocalDataSourceModule = Module {
     LocalDataSource(userDefaults: UserDefaultsModule.value)
 }
+
+var RickMortyAPIModule = Module {
+    RickMortyAPI()
+}
