@@ -14,16 +14,18 @@ enum DrawStateEnum {
     case Selected
 }
 
-final class DrawPendingState: ViewState, ObservableObject{
+final class DrawPendingState: ViewState, ObservableObject {
     typealias EnumState = DrawStateEnum
     var enumState: DrawStateEnum = DrawStateEnum.Pending
 }
-final class DrawSelectedState: ViewState, ObservableObject{
+
+final class DrawSelectedState: ViewState, ObservableObject {
     typealias EnumState = DrawStateEnum
     var enumState: DrawStateEnum = DrawStateEnum.Selected
     var image: PhotosPickerItem
     var data: Data
-    init(image: PhotosPickerItem, data: Data){
+
+    init(image: PhotosPickerItem, data: Data) {
         self.image = image
         self.data = data
     }

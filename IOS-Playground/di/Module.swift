@@ -9,7 +9,7 @@ import Foundation
 
 struct Module<T> {
     var initializer: () -> T
-    
+
     lazy var value: T = {
         return initializer()
     }()

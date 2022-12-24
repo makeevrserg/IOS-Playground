@@ -12,15 +12,16 @@ import PhotosUI
 
 class DrawViewModel: ViewModel {
     @Published var state: any ViewState<DrawStateEnum> = DrawPendingState()
-    
-    
+
+
     func onImagesSelected(image: PhotosPickerItem, data: Data) {
         state = DrawSelectedState(image: image, data: data) as any ViewState<DrawStateEnum>
     }
-    func cancelSelection(){
+
+    func cancelSelection() {
         state = DrawPendingState() as any ViewState<DrawStateEnum>
     }
-    
+
 
 }
 

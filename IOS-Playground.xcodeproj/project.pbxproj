@@ -32,6 +32,10 @@
 		A895BA3629572950004E6FE8 /* DrawViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895BA3529572950004E6FE8 /* DrawViewModel.swift */; };
 		A895BA44295733D8004E6FE8 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895BA43295733D8004E6FE8 /* State.swift */; };
 		A895BA46295733F3004E6FE8 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895BA45295733F3004E6FE8 /* ViewState.swift */; };
+		A895BA4B295746D1004E6FE8 /* PendingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895BA4A295746D1004E6FE8 /* PendingScreen.swift */; };
+		A895BA4D295746E2004E6FE8 /* SelectedScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895BA4C295746E2004E6FE8 /* SelectedScreen.swift */; };
+		A895BA4F295748F4004E6FE8 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895BA4E295748F4004E6FE8 /* Icons.swift */; };
+		A895BA5129574974004E6FE8 /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895BA5029574974004E6FE8 /* ColorPickerView.swift */; };
 		A8F942D1295666A700594222 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F942D0295666A700594222 /* AppDelegate.swift */; };
 		A8F942D3295666A700594222 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F942D2295666A700594222 /* SceneDelegate.swift */; };
 		A8F942D5295666A700594222 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F942D4295666A700594222 /* ViewController.swift */; };
@@ -72,6 +76,10 @@
 		A895BA3529572950004E6FE8 /* DrawViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawViewModel.swift; sourceTree = "<group>"; };
 		A895BA43295733D8004E6FE8 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		A895BA45295733F3004E6FE8 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
+		A895BA4A295746D1004E6FE8 /* PendingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingScreen.swift; sourceTree = "<group>"; };
+		A895BA4C295746E2004E6FE8 /* SelectedScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedScreen.swift; sourceTree = "<group>"; };
+		A895BA4E295748F4004E6FE8 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
+		A895BA5029574974004E6FE8 /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
 		A8F942CD295666A700594222 /* IOS-Playground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IOS-Playground.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8F942D0295666A700594222 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8F942D2295666A700594222 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +146,7 @@
 			children = (
 				A8F942F12956689300594222 /* Colors.swift */,
 				A895BA092956FFC1004E6FE8 /* Theme.swift */,
+				A895BA4E295748F4004E6FE8 /* Icons.swift */,
 			);
 			path = theme;
 			sourceTree = "<group>";
@@ -191,11 +200,22 @@
 		A895BA30295727E7004E6FE8 /* draw */ = {
 			isa = PBXGroup;
 			children = (
+				A895BA49295746C8004E6FE8 /* states */,
 				A895BA31295727F2004E6FE8 /* DrawScreen.swift */,
 				A895BA3529572950004E6FE8 /* DrawViewModel.swift */,
 				A895BA43295733D8004E6FE8 /* State.swift */,
+				A895BA5029574974004E6FE8 /* ColorPickerView.swift */,
 			);
 			path = draw;
+			sourceTree = "<group>";
+		};
+		A895BA49295746C8004E6FE8 /* states */ = {
+			isa = PBXGroup;
+			children = (
+				A895BA4A295746D1004E6FE8 /* PendingScreen.swift */,
+				A895BA4C295746E2004E6FE8 /* SelectedScreen.swift */,
+			);
+			path = states;
 			sourceTree = "<group>";
 		};
 		A8F942C4295666A700594222 = {
@@ -386,6 +406,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A895BA4D295746E2004E6FE8 /* SelectedScreen.swift in Sources */,
 				A895BA1F29570921004E6FE8 /* RMCharacters.swift in Sources */,
 				A895BA1729570777004E6FE8 /* RMCharacterList.swift in Sources */,
 				A895BA2F29571B25004E6FE8 /* RMCharacterDetails.swift in Sources */,
@@ -397,6 +418,7 @@
 				A84CB53D29567CAD00181D2C /* UserDefaultsScreen.swift in Sources */,
 				A8F942D1295666A700594222 /* AppDelegate.swift in Sources */,
 				A8F942F729566A3400594222 /* StoryBoardView.swift in Sources */,
+				A895BA4B295746D1004E6FE8 /* PendingScreen.swift in Sources */,
 				A895BA1329570299004E6FE8 /* ThemeLocalStorage.swift in Sources */,
 				A8F942FA29566A6F00594222 /* ScreenChooser.swift in Sources */,
 				A84CB54029567D0200181D2C /* ILocalStorage.swift in Sources */,
@@ -412,9 +434,11 @@
 				A84CB54429567F7F00181D2C /* UserDefaultScreenViewModel.swift in Sources */,
 				A84CB53A29567C5700181D2C /* Module.swift in Sources */,
 				A8F942F22956689300594222 /* Colors.swift in Sources */,
+				A895BA4F295748F4004E6FE8 /* Icons.swift in Sources */,
 				A895BA2C29571AEC004E6FE8 /* CharacterCard.swift in Sources */,
 				A895BA3629572950004E6FE8 /* DrawViewModel.swift in Sources */,
 				A895BA2529571678004E6FE8 /* utilities.swift in Sources */,
+				A895BA5129574974004E6FE8 /* ColorPickerView.swift in Sources */,
 				A895BA2329571659004E6FE8 /* Pager.swift in Sources */,
 				A895BA1C29570815004E6FE8 /* RickMortyAPI.swift in Sources */,
 				A895BA11295700A5004E6FE8 /* IntLocalStorage.swift in Sources */,
