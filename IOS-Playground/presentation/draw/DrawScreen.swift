@@ -7,7 +7,7 @@
 
 import SwiftUI
 import PhotosUI
-
+@available(iOS 16.0, *)
 struct DrawScreen: View {
     @ObservedObject var viewModel: DrawViewModel = DrawViewModel()
 

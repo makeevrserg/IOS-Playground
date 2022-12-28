@@ -8,6 +8,7 @@
 import SwiftUI
 import PhotosUI
 
+@available(iOS 16.0, *)
 struct PendingScreen: View {
     var onSelected: (PhotosPickerItem, Data) -> Void
     @State var selectedItems: [PhotosPickerItem] = []

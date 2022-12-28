@@ -32,3 +32,32 @@ struct CharacterCard: View{
         }
     }
 }
+
+struct LocationCard: View{
+    var location: RMLocation
+    init(location: RMLocation) {
+        self.location = location
+    }
+    var body: some View {
+        HStack{
+            
+            VStack(alignment: HorizontalAlignment.leading) {
+                HStack{
+                    Text("Название")
+                    Spacer()
+                    Text(location.name ?? "-")
+                }
+                HStack{
+                    Text("Тип")
+                    Spacer()
+                    Text(location.type ?? "-")
+                }
+                HStack{
+                    Text("Измерение")
+                    Spacer()
+                    Text(location.dimension ?? "-")
+                }
+            }
+        }
+    }
+}

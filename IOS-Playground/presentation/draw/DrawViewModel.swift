@@ -10,16 +10,18 @@ import Combine
 import SwiftUI
 import PhotosUI
 
+
+@available(iOS 16.0, *)
 class DrawViewModel: ViewModel {
-    @Published var state: any ViewState<DrawStateEnum> = DrawPendingState()
+    @Published var state: any DrawState = DrawPendingState()
 
 
     func onImagesSelected(image: PhotosPickerItem, data: Data) {
-        state = DrawSelectedState(image: image, data: data) as any ViewState<DrawStateEnum>
+        state = DrawSelectedState(image: image, data: data) as any DrawState
     }
 
     func cancelSelection() {
-        state = DrawPendingState() as any ViewState<DrawStateEnum>
+        state = DrawPendingState() as any DrawState
     }
 
 

@@ -23,7 +23,19 @@ struct RMCharacter: Decodable {
     var image: String
 }
 
+struct RMLocation: Decodable {
+    var id: Int
+    var name: String?
+    var type: String?
+    var dimension: String?
+}
+
 struct RMCharacters: Decodable {
     var info: RMInfo
     var results: [RMCharacter]
+}
+
+struct RMLocations: Decodable {
+    var info: RMInfo
+    var results: [RMLocation]
 }

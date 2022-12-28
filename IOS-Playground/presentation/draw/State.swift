@@ -14,12 +14,12 @@ enum DrawStateEnum {
     case Selected
 }
 
-final class DrawPendingState: ViewState, ObservableObject {
+final class DrawPendingState: DrawState, ObservableObject {
     typealias EnumState = DrawStateEnum
     var enumState: DrawStateEnum = DrawStateEnum.Pending
 }
-
-final class DrawSelectedState: ViewState, ObservableObject {
+@available(iOS 16.0, *)
+final class DrawSelectedState: DrawState, ObservableObject {
     typealias EnumState = DrawStateEnum
     var enumState: DrawStateEnum = DrawStateEnum.Selected
     var image: PhotosPickerItem
@@ -33,3 +33,7 @@ final class DrawSelectedState: ViewState, ObservableObject {
 
 
 
+protocol DrawState: ViewState where EnumState == DrawStateEnum {
+    
+    
+}

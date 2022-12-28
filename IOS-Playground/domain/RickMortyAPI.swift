@@ -23,4 +23,13 @@ class RickMortyAPI {
         return result
 
     }
+    
+    func fetchLocations(page: Int) async -> Result<RMLocations, AFError> {
+        let parameters = ["page": page]
+        let request = AF.request(RickMortyAPI.path(path: "location"), method: .get, parameters: parameters)
+        let task = request.serializingDecodable(RMLocations.self)
+        let result = await task.result
+        return result
+
+    }
 }

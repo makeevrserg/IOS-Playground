@@ -36,6 +36,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
             window.makeKeyAndVisible()
             window.overrideUserInterfaceStyle = LocalDataSourceModule.value.theme.load().getUserInterfaceStyle()
+            
+            UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler: { didAllow, error in
+            })
         }
     }
 

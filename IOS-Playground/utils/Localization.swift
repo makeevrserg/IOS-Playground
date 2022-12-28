@@ -28,7 +28,11 @@ struct LocalizedString: ILocalization {
         }
     }
     
-    static var currentLocale: String { get { return Locale.current.language.languageCode?.identifier ?? "en" } }
+    static var currentLocale: String { get { if #available(iOS 16, *) {
+        return Locale.current.language.languageCode?.identifier ?? "en"
+    } else {
+        return Locale.current.languageCode ?? "en"
+    } } }
 }
 
 class Strings {

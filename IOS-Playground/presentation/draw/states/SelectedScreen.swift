@@ -13,7 +13,7 @@ struct Line {
     var color: Color = .red
     var lineWidth: Double = 1.0
 }
-
+@available(iOS 16.0, *)
 struct SelectedScreen: View {
     var state: DrawSelectedState
     var viewModel: DrawViewModel

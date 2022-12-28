@@ -8,10 +8,12 @@
 import Foundation
 import SwiftUI
 import XNavigation
+import UIKit
 
 struct ScreenChooser: View {
     
     @EnvironmentObject var navigation: Navigation
+
 
     var body: some View {
         NavigationView {
@@ -30,19 +32,47 @@ struct ScreenChooser: View {
                     UserDefaultsScreen()
                 }
                 ChooserButton(title: "RickMorty Characters", navigation: navigation) {
-                    RickMortyCharacterList()
+                    RickMortyTabView()
                 }
-                ChooserButton(title: "Draw screen", navigation: navigation) {
-                    DrawScreen()
-                }
+//                ChooserButton(title: "Draw screen", navigation: navigation) {
+//                    DrawScreen()
+//                }
                 BackgroundButton(title: "Dark theme") {
                     LocalDataSourceModule.value.theme.save(value: Theme.dark)
-                    
                     navigation.window.overrideUserInterfaceStyle = LocalDataSourceModule.value.theme.load().getUserInterfaceStyle()
+                    Utils.vibrate()
                 }
                 BackgroundButton(title: "Light theme") {
                     LocalDataSourceModule.value.theme.save(value: Theme.light)
                     navigation.window.overrideUserInterfaceStyle = LocalDataSourceModule.value.theme.load().getUserInterfaceStyle()
+                    Utils.vibrate()
+                }
+                
+                BackgroundButton(title: "Notification") {
+                    //creating the notification content
+                     let content = UNMutableNotificationContent()
+                     
+                     //adding title, subtitle, body and badge
+                     content.title = "IOS-Playground"
+                     content.subtitle = "This is a sample subtitle"
+                     content.body = "Very long body very very a lot of words in this body"
+                     content.badge = 1
+                     
+                     //getting the notification trigger
+                     //it will be called after 5 seconds
+                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5.0, repeats: false)
+                     
+                     //getting the notification request
+                     let request = UNNotificationRequest(identifier: "makeevrserg", content: content, trigger: trigger)
+                             
+                     //adding the notification to notification center
+                    UNUserNotificationCenter.current().add(request){ error in
+                        if let error = error {
+                            print(error)
+                        }
+                        
+                    }
+                        
                 }
             }
             .navigationBarTitle("First Tab", displayMode: .large)
